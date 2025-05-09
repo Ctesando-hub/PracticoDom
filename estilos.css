@@ -1,0 +1,39 @@
+#titulo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    color: rgb(73, 26, 203);
+    text-align: center;
+
+
+}
+
+#div1{
+   text-align: center;
+    margin-top: 5%;
+}
+
+#tabla{
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 50%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+th, td{
+    border: 1px solid #0d1149;
+    padding: 10px;
+    text-align: center;
+
+}
+th {
+    background-color: #1965d6;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
