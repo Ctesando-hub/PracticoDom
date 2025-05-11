@@ -20,7 +20,7 @@
 }
 
 th, td{
-    border: 1px solid #0d1149;
+    border: 2px solid #0d1149;
     padding: 10px;
     text-align: center;
 
@@ -36,4 +36,10 @@ th {
 
   tr:hover {
     background-color: #ddd;
+  }
+
+  p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    color: aquamarine;
   }
