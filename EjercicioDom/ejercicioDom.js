@@ -72,3 +72,104 @@ function AplicarEstiloText(){
 }
 
 AplicarEstiloText();
+
+/*Validación de formulario simple
+Crear un pequeño formulario con nombre y correo. Al hacer click en enviar, debe
+validar que ambos campos estén completos. Muestra un mensaje de error o éxito
+según el caso.*/
+
+//tomo los elementos html:
+
+const formulario = document.getElementById("formulario");
+const mensaje = document.getElementById("mensaje");
+
+function validarDatos(){
+    formulario.addEventListener("submit", function(evento){
+        evento.preventDefault()// Evita que se envíe el formulario
+
+        const nombre = document.getElementById("name").value.trim();
+        const correo = document.getElementById("mail").value.trim();
+
+        if( nombre === ""|| correo === ""){
+            mensaje.textContent = "Por favor complete los datos";
+            mensaje.className = "mensaje error";
+        }else{
+            mensaje.textContent = "Formulario enviado con exito";
+            mensaje.className = "mensaje exito";
+        }
+    })
+
+
+}
+
+validarDatos();
+console.log("Elemento mensaje:", mensaje);
+
+//ejercicio 13
+/*Generador de lista de tareas
+Crear una lista de tareas con un input y botón. Cada tarea debe incluir un botón
+para marcarla como completada (tachada).*/
+
+const botonTarea = document.getElementById("btn_tarea");
+const textoTarea = document.getElementById("input_tarea");
+const lista1 =document.getElementById("listaTarea");
+
+function GenerarLista(){
+    botonTarea.addEventListener("click", function() {
+     let tarea_li = document.createElement("li");
+     
+     tarea_li.textContent = textoTarea.value.trim();
+      let botonTachado = document.createElement("button");
+      botonTachado.textContent ="✓";
+      botonTachado.style.color ="green";
+      botonTachado.addEventListener("click", function(){
+        tarea_li.classList.toggle("tachada");
+      })
+    
+     
+      tarea_li.appendChild(botonTachado);
+      lista1.appendChild(tarea_li);
+      textoTarea.value ="";
+
+    })  
+     
+}
+GenerarLista();
+
+// ejercicio 14 :Mostrar longitud de texto ingresado
+/*Incluir un input de texto y, mientras el usuario escribe, muestra la cantidad de
+caracteres ingresados.*/
+
+const Largotext =  document.getElementById("input_long");
+const numeroText =  document.getElementById("contenedor_longitud");
+
+function LargoTexto(){
+    Largotext.addEventListener("input", ()=>{
+        numeroText.textContent = Largotext.value.length;
+    })
+
+}
+LargoTexto();
+
+/*Ejercicio 15
+Cambiar imagen con botón
+Mostrar una imagen en pantalla. Al hacer click en un botón, debe cambiar por otra
+imagen (usa 2 o más imágenes disponibles).*/
+
+const botonImagen = document.getElementById("btn_imagen");
+const imagen2 = document.getElementById("imagen1");
+ let mostrarImagen = true;
+function cambiarImagen(){
+ botonImagen.addEventListener("click",function (){
+  if(mostrarImagen){
+    imagen2.src ="imagenes/WhatsApp Image 2025-05-12 at 1.48.19 PM.jpeg";
+    mostrarImagen= false;
+  }else{
+    imagen2.src="imagenes/WhatsApp Image 2025-05-12 at 1.47.48 PM.jpeg"
+    mostrarImagen = true;
+  }
+
+
+ })
+}
+cambiarImagen();

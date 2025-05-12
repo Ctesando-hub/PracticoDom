@@ -43,3 +43,35 @@ th {
     font-size: larger;
     color: aquamarine;
   }
+
+   .mensaje {
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .mensaje.error {
+    color: white;
+    background-color: red;
+  }
+
+  .mensaje.exito {
+    color: white;
+    background-color: green;
+  }
+
+ .tachada{
+   text-decoration: line-through;
+   color: gray;
+  }
+  /*ejercicio 15*/
+  #div_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img1{
+     width: 20%;
+     height: 20%;
+  }
