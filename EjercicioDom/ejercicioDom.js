@@ -54,3 +54,21 @@ function EscribirTiempoReal(){
 }
 
 EscribirTiempoReal();
+
+/*Ejercicio 11
+Aplicar estilos a varios elementos
+Agregar varios párrafos con una clase compartida. Al presionar un botón, debe
+cambiar el fondo de esos elementos (resaltarlos visualmente).*/
+
+const btn_aplicarEstilo = document.getElementById("aplicar_estilo");
+const textoConEstilo = document.getElementsByClassName("texto_estilo");
+
+function AplicarEstiloText(){
+    btn_aplicarEstilo.addEventListener("click", ()=>{
+        for(let i =0; i < textoConEstilo.length; i++){
+        textoConEstilo[i].style.color = "white";
+        textoConEstilo[i].style.background = "blue";
+    }})
+}
+
+AplicarEstiloText();
